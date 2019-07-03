@@ -1,3 +1,7 @@
 <h1>Welcome</h1>
 
-<p>Please go <a href = "/show">here</a> to see all the recipes in the database. Go <a href = "/recipes/new">here</a> to enter a new recipe.</p>
+  <% @recipes.each do |r| %>
+    <a href="/recipes/<%=r.id%>">
+    <%= r.name %>
+    </a>
+    <%end%>
